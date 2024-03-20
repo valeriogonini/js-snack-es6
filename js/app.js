@@ -22,7 +22,7 @@ console.log("Membri invitati", membersTable);
 
 // }
 
-const membersTableElement = membersTable.map((element, i,array) => {
+const membersTableElement = membersTable.map((element, i, array) => {
     return {
         nameTable: "Tavolo VIP",
         name: element,
@@ -113,3 +113,53 @@ studends.forEach((element, i, array) => {
 
 })
 console.log(lowerStudends);
+
+
+// SNACK 3
+// Creare un array di oggetti:
+
+// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+
+const bikes = [
+    {
+        name : "Hyunday",
+        peso : 10
+    },
+    {
+        name : "Toyota",
+        peso : 5
+    },
+    {
+        name : "Pegeout",
+        peso : 8
+    },
+    {
+        name : "Jeep",
+        peso : 3
+    },
+    {
+        name : "Ferrari",
+        peso : 11
+    }
+
+]
+let pesoMinimo
+let indexPesoMinimo
+for ( let i = 0; i < bikes.length; i++){
+    const heightBikes = bikes[i]
+    //console.log(heightBikes);
+    const {peso} = heightBikes
+    if (i === 0){
+        pesoMinimo = peso
+        indexPesoMinimo = 0
+    } else if (peso < pesoMinimo){
+        pesoMinimo = peso 
+        indexPesoMinimo = i
+    }
+}
+console.log(bikes[indexPesoMinimo]);
+
+//console.log(bikes);
+// Stampare in console la bici con peso minore utilizzando destructuring e template literal
+
+
